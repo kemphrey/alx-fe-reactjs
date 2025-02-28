@@ -1,4 +1,3 @@
-// UserDetails.jsx
 import { useUser } from './UserContext';
 
 function UserDetails() {

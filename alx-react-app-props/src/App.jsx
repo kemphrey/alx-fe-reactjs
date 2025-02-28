@@ -1,4 +1,3 @@
-// App.jsx
 import UserContext from './UserContext';
 import ProfilePage from './ProfilePage';
 

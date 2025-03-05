@@ -2,10 +2,10 @@ import create from "zustand";
 
 const useRecipeStore = create((set) => ({
   recipes: [],
-  searchTerm: "", // Initialize searchTerm
+  searchTerm: "",
   favorites: [],
-  
-  // Set a new search term
+  recommendations: [], // Add recommendations array
+
   setSearchTerm: (term) => set({ searchTerm: term }),
 
   addRecipe: (newRecipe) =>
@@ -23,10 +23,25 @@ const useRecipeStore = create((set) => ({
       ),
     })),
 
-  // Set multiple recipes (useful for initialization)
   setRecipes: (recipes) => set({ recipes }),
 
-  // Filtered recipes based on search term
+  addFavorite: (recipeId) =>
+    set((state) => ({ favorites: [...state.favorites, recipeId] })),
+
+  removeFavorite: (recipeId) =>
+    set((state) => ({
+      favorites: state.favorites.filter((id) => id !== recipeId),
+    })),
+
+  // Generate recommendations based on favorite recipes
+  generateRecommendations: () =>
+    set((state) => {
+      const recommended = state.recipes.filter(
+        (recipe) => state.favorites.includes(recipe.id) && Math.random() > 0.5
+      );
+      return { recommendations: recommended };
+    }),
+
   filteredRecipes: (state) =>
     state.recipes.filter((recipe) =>
       recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())

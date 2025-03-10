@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Objective: Implement advanced data fetching and management in a React application using React Query, focusing on handling API interactions efficiently and improving user interface responsiveness.
+
+Task Description:
+This task involves integrating React Query into a React project to fetch, cache, and update data from a public API. You’ll build a component that handles these data operations smoothly, demonstrating the capabilities of React Query in optimizing data interactions in React applications.
+

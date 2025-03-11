@@ -2,6 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import TodoList from "./src/TodoList";
+
+function App() {
+  return (
+    <div>
+      <h1>My Todo App</h1>
+      <TodoList />
+    </div>
+  );
+}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,3 +43,4 @@ function App() {
 }
 
 export default App
+

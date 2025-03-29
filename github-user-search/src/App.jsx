@@ -1,10 +1,10 @@
-import SearchBar from "./components/SearchBar";
+import Search from "./components/Search";
 
 export default function App() {
   return (
-    <div>
-      <h1 className="text-center text-2xl font-bold p-4">GitHub User Search</h1>
-      <SearchBar />
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-3xl font-bold mb-6">GitHub User Search</h1>
+      <Search />
     </div>
   );
 }
